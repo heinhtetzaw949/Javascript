@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Lesson</title>
+    <style>
+        body{
+            height: 3000px;
+        }
+        .mb-3{
+            margin-bottom:15px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="heading" style="color: blue;font-size: 50px;" onclick="run()">DOM နေကောင်းလား</h1>
+    
+    <p>
+        Lorem ipsum dolor sit amet consectetur <b title="Hein Htet Zan" data="bb">HHZ</b> elit. Dicta molestiae soluta libero quas veniam officiis illum distinctio labore at, ad quis harum voluptatem est porro autem voluptates? Reprehenderit, dolores tempore.
+    </p>
+
+    <img src="Img/lightyear.webp" style="width: 500px;" alt="">
+
+    <a href="https://google.com" target="_blink" >Click to Google</a>
+
+    <img src="../learnHTML/assets/poe.jpg" style="height: 200px;" alt="">
+    <hr>
+    <h4>Fruit List</h4>
+    <ul>
+        <li>Apple</li>
+        <li class="abc">Orange</li>
+        <li data="cc">Mango</li>
+        <li hhz="bb" asdf='asdfjkl'>Banana</li>
+    </ul>
+    <hr>
+    <h4>Student List</h4>
+    <ol>
+        <li>Mg Mg</li>
+        <li>Kyaw Kyaw</li>
+        <li class="abc">Zaw Zaw</li>
+        <li>Mya Mya</li>
+    </ol>
+
+    <hr>
+
+<input type="range" name="" id="rangeValue"> <span id="rangeValue">0</span>
+
+    <form action="" id="testForm">
+        <fieldset>
+            <legend>Test Form</legend>
+            <div class="mb-3">
+                <label class="abc">Name</label>
+                <br>
+                <input type="text" name="name" id="name">
+            </div>
+            <div class="mb-3">
+                <label>Weight</label>
+                <br>
+                <input type="number" name="weight" id="weight">
+            </div>
+            <div class="mb-3">
+                <label>Date of Birdth</label>
+                <br>
+                <input type="date" name="bd" id="bd">
+            </div>
+            <div class="mb-3">
+                <label>Photo</label>
+                <br>
+                <input type="file" name="photo[]" id="photo" multiple>
+            </div>
+        
+            <div class="mb-3">
+                <label>Select Your Country</label>
+                <br>
+                <select name="country" id="country">
+                    <option value="mm">Myanmar</option>
+                    <option value="jp">Japan</option>
+                    <option value="kr">Korea</option>
+                    <option value="th">Thailand</option>
+                </select>
+            </div>
+            <hr>
+            <button type="button">Submit</button>
+        </fieldset>
+    </form>
+
+    <a href="#">Test Link</a>
+
+
+
+
+    <script>
+
+
+        //object
+        let myself = {
+
+            //properties
+            firstName: "hein",
+            lastName: "htet",
+            id: 123,
+
+            //methods
+            fullName: function() {
+                return this.firstName + " " + this.lastName;
+            },
+            //es6
+            showName(){
+                return this.firstName + " " + this.lastName;
+            },
+            //method with parameter
+            eat(everytihig){
+                return "I like "+everytihig;
+            }
+
+        };   
+        
+
+            // document.querySelector("img").onclick = function (){
+            //     alert("Hello");
+            // }
+
+
+            document.querySelector("img").addEventListener("click",function(){
+                alert("knock knock");
+            })
+    
+
+                function run(){
+                    alert("Head");
+                }
+
+
+                document.querySelector("p").addEventListener("mousemove",function(){
+                    console.log("Hello");
+                })
+
+
+                document.querySelector("[type='text']").addEventListener("change",function(){
+                    console.log("Hi");
+                })
+
+                document.querySelector("input[type='text']").addEventListener("keyup",function(e){
+                    e.keyCode == 13 ? console.log(this.value) :  ""
+                    // console.log("Typing");
+                })
+
+                // document.getElementById("testForm").addEventListener("mouseenter",function(e){
+                //     console.log(e);
+                // })
+
+                document.querySelector("a").addEventListener("click",function(e){
+                    e.preventDefault();
+                    let x = confirm("Are You Sure?");
+                    x ? location.href = this.href : "";
+                    console.log(x);
+
+                })
+
+                document.querySelector("[type='range']").addEventListener("input",function(){
+                    document.getElementById("rangeValue").innerText = this.value;
+                    console.log(this.value);
+                })
+
+
+    </script>
+    
+</body>
+</html>

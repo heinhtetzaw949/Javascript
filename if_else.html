@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // let arr = [];
+        // let obj = {};
+
+
+            // -1 ? console.log(true) : console.log(false)
+
+            // 1 ? console.log(true) : console.log(false)
+            // 0 ? console.log(true) : console.log(false)
+            // -1 ? console.log(true) : console.log(false)
+            // 1.4 ? console.log(true) : console.log(false)
+            // NaN ? console.log(true) : console.log(false)
+            // undefined ? console.log(true) : console.log(false)
+            // null ? console.log(true) : console.log(false)
+            // obj ? console.log(true) : console.log(false)
+            // arr ? console.log(true) : console.log(false)
+
+            let pocketmoney = 6000;
+
+            if(pocketmoney>=1500){
+                console.log("Let's Go to School")
+                pocketmoney -= 300;
+
+                if(pocketmoney > 15300){
+                    pocketmoney -= 15000;
+                    pocketmoney -=300;
+                    console.log("Pizza",pocketmoney)
+
+                }else if(pocketmoney > 10300){
+                    pocketmoney -= 10000;
+                    pocketmoney -= 300;
+
+                    console.log("Theatre",pocketmoney)
+
+                }else if(pocketmoney > 5300){
+                    pocketmoney -= 5000;
+                    pocketmoney -= 300;
+
+                    console.log("Bubble Tea",pocketmoney)
+                }
+
+                else{
+                    pocketmoney -= 300;
+                    console.log("Back to home",pocketmoney)
+                }
+            }else{
+                console.log("At Home",pocketmoney)
+            }
+
+
+    </script>
+</body>
+</html>

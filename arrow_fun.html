@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function ( ES6 )</title>
+</head>
+<body>
+    <script>
+
+        // function one(){
+        //     return "this is one";
+        // }
+
+        let one = _ => 'this is one';
+
+       
+
+        // function two(){
+        //     let x = "this is two";
+        //     return x;
+        // }
+
+        let two = _ => {
+            let x = "this is two";
+            return x;
+        }
+
+      
+
+        // function three(x){
+        //     return "this is "+x;
+        // }
+
+        let three = (x) => "this is " + x;
+       
+
+        // function four(x,y){
+        //     let z = x+y;
+        //     return z;
+        // }
+
+        let four = (x,y) => x+y;
+
+        
+
+
+        //IFFE
+        // (function(){
+        //     console.log("this is five")
+        // })()
+
+        (_=>console.log("this is five"))()
+     
+
+
+        window.addEventListener("load",function(){
+            console.log("this is six");
+        });
+       
+
+        let seven = {
+            name : "seven",
+            showName : function(){
+                // console.log(this);
+                return `this is ${this.name}`;
+            },
+           myName(){
+               return "this is " + this.name;
+           },
+           showMyName : _ => console.log(seven.name)
+        }
+
+
+        const fruits = ["Banana",  "Apple", "line", "Mango", "Orange", "Lemon", "kiwi"];
+
+        // စာလုံး 5 လုံးပါတဲ့အသီးတွေကို ရွေးထုတ်ပါ
+        // စာလုံး အကြီးပြောင်းပါ
+        // - နဲ့စပ်ပါ
+        // စာလုံးအသေးပြန်ပြောင်းပါ
+
+        // let result = fruits.filter(function(el){
+        //     return el.length == 5
+        // }).map(function(el){
+        //     return el.toUpperCase();
+        // }).join("-").toLowerCase();
+
+
+        // console.log(result);
+
+
+    </script>
+</body>
+</html> 

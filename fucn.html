@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x = 5;
+        let y;
+
+        let rates = {
+            usd	:1760.0,
+            eur	:2038.9,
+            sgd	:1304.0,
+        }
+
+        function test(){
+           let x = 10;
+           let y = 75;
+
+            return x+y;
+        }
+
+
+        function findBirthYear(Name="HHZ",WriteYourAge="19"){
+            
+            let currentyear = 2021;
+            let bdYear = currentyear - WriteYourAge;
+
+            return `${Name} was born in ${bdYear}`;
+        }
+
+            // task - Usd is 50 if you have,how much mmk?
+            // task - Sgd is 30 if you have,how much mmk?
+            // task - Eur is 150 if you have,how much mmk?
+
+            function exchange(amount,fromcurrency,tocurrency){
+                    let toMMK = amount * rates[fromcurrency];
+                    let finalcurrency = toMMK/rates[tocurrency];
+
+                    return `${finalcurrency} ${tocurrency}`;
+                }
+
+
+                function toMMK(amount,fromcurrency){
+                    let exchangeRate = rates[fromcurrency];
+                        let money = amount * exchangeRate;
+
+                        return money;
+
+                        return {
+                            "1.amount" : amount,
+                            "2.rate"   : rates[fromcurrency]+ " MMK",
+                            "3.MM"  : money + " MMK",
+                            "4.tax"    : tax(money)+ " MMK",
+                            "5.Total"  : money - tax(money)
+                        }
+                }
+
+
+              
+
+                function tax(money){
+                        return (money/100)*5 + " Kyat";
+                }
+
+
+    </script>
+</body>
+</html>

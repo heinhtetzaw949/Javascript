@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    #SPN{
+            width: 200px;
+            display: inline-block;
+        }
+</style>
+
+    
+</head>
+<body>
+ 
+   
+    <h1>Area Calculator</h1>
+
+        <div>
+            <span>Result:</span>
+            <span id="SPN"> </span>
+
+            <button>Store</button>
+            <button>Clear</button>
+
+           
+
+        </div>
+        <br>
+
+        <input type="number" name="" id="width" placeholder="Width">
+        <input type="number" name="" id="breadth" placeholder="Breadth">
+        <button id="calc">Calculate</button>
+   
+  
+
+         <script>
+
+            let SPN = document.getElementById("SPN");
+            let calc = document.getElementById("calc");
+
+            calc.addEventListener("click",function(){
+                let area = width.value * breadth.value;
+                let calcArea = `${width.value}ft<sup>2</sup> * ${breadth.value}ft<sup>2</sup>` ;
+                SPN.innerHTML = calcArea + area;
+            })
+
+
+         </script>
+
+         
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+        <h1>Counter <span id="counter">5</span></h1>
+
+        <button id="btn">Start</button>
+
+
+    <script>
+
+        //     let  no = 1;
+
+        //     function aa(){
+
+               
+        //         console.log(no++ +"World");
+        //         return "Hello";
+             
+        //     }
+           
+        // let myjob = setInterval(aa,2000);
+
+
+                let time = prompt("When time to start?")
+                document.getElementById("counter").innerHTML = time;
+                let timeinmillisec = time * 1000
+            
+
+                document.getElementById("btn").onclick = function(){
+                   toRun(timeinmillisec);
+                }
+
+            function reverseCounter(){
+                let counter = document.getElementById("counter").innerHTML;
+                document.getElementById("counter").innerHTML = counter - 1;
+            }
+
+           function toRun(tostarttime){
+            setInterval(reverseCounter,1000);
+
+            setTimeout(function(){
+                location.href = "https://google.com"
+            },tostarttime)
+
+           }
+    </script>
+</body>
+</html>

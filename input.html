@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <input type="text" name="" id="Name" placeholder="WriteYourName">
+    <input type="text" name="" id="Age" placeholder="WriteYourAge">
+    <button id="btn">Calculate</button>
+    <h1 id="answer">Answer</h1>
+    
+      <script>
+
+          
+
+
+           function findBirthYear(Name="HHZ",Age="19"){
+            
+            let currentyear = 2021;
+            let bdYear = currentyear - Age;
+
+            return `${Name} was born in ${bdYear}`;
+        }
+
+           document.getElementById("btn").onclick = function(){
+               let Name = document.getElementById("Name").value;
+               let Age = document.getElementById("Age").value;
+               
+               document.getElementById("answer").innerText = findBirthYear(Name,Age);
+           }
+
+      </script>
+
+
+</body>
+</html>

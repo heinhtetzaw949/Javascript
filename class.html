@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="clock"></p>
+    <button id="btn">Stop</button>
+
+    
+    <script>
+        // let Myself = {
+        //     name : "Morbius",
+        //     age : 19,
+        //     job : "Vampire",
+        //     skill :" Wed Developer",
+
+        //     teach(){
+        //     return this.name + " can teach" + this.skill
+        //     },
+
+        //     showBdYear(){
+        //             return this.name +" was born in " + `${2021-this.age}`
+        //     }
+
+        // }
+
+
+            //     class myself {
+
+            //         constructor(x,y){
+            //             console.log("I'm constructor " + x + y)
+            //         }
+
+            //           name = "Morbius"
+            //           age = 19
+            //             job = "Vampire"
+            //             skill =" Wed Developer"
+
+            //             teach(){
+            //             return "I can learn web developer"
+            //             };
+
+            //             showBdYear(){
+            //                     return "I was born in 2002"
+            // }
+            //     }
+
+
+            //     let Myself = new myself('aaa',"bb");
+            //     console.log(Myself.name)
+            //     console.log(Myself.age)
+            //     console.log(Myself.job)
+            //     console.log(Myself.skill)
+                
+                
+                    // class Student{
+                    //     constructor(name,age,mark){
+                    //         this.name = name;
+                    //         this.age = age;
+                    //         this.mark = mark;
+
+                    //     }
+
+
+                    //         learn(){
+                    //             return this.name + " can learn";
+                    //         }
+
+                    // }
+
+                    //     let s1 = new Student("Mg Mg",19,40);
+                    //     let s2 = new Student("ag ag",19,40);
+                    //     let s3 = new Student("su su",19,40);
+
+                //   let a = new Date();
+
+
+                let test = function(){
+                    let d = new Date();
+                 document.getElementById("clock").innerHTML = `${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`
+                }
+
+                       let pause = setInterval(test,1000);
+
+                 
+                  document.getElementById("btn").addEventListener("click",function(){
+                      clearInterval(pause);
+                    //   console.log("aaa")
+                  })
+
+
+
+    </script>
+</body>
+</html>
